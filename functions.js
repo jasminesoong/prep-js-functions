@@ -12,6 +12,8 @@
  *  functions.
  */
 
+var a = 1;
+var b = 10;
 
 /**
  *  #2
@@ -21,6 +23,11 @@
  *  Store this value in a variable named `sum`.
  */
 
+function add(a, b){
+	return a + b;
+}
+var sum = add(a, b)
+console.log(sum)
 
 /**
  *  #3
@@ -30,6 +37,11 @@
  *  Store this value in a variable named `difference`
  */
 
+function subtract(a, b){
+	return a - b;
+}
+var difference = subtract(a, b)
+console.log(difference)
 
 /**
  *  #4
@@ -38,6 +50,11 @@
  *  This function returns the result of multiplying `b` by `a`.
  *  Store this value in a variable named `product`
  */
+
+function multiply(a, b){
+return a * b;
+}
+console.log(multiply(2, 8))
 
 
 /**
