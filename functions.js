@@ -23,11 +23,12 @@ var b = 10;
  *  Store this value in a variable named `sum`.
  */
 
-function add(a, b){
-	return a + b;
+function add(n1, n2){
+	return n1 + n2;
 }
-var sum = add(a, b)
-console.log(sum)
+add(a, b);
+var sum = add(a, b);
+console.log(sum);
 
 /**
  *  #3
@@ -37,11 +38,12 @@ console.log(sum)
  *  Store this value in a variable named `difference`
  */
 
-function subtract(a, b){
-	return a - b;
+function subtract(n1, n2){
+	return n1 - n2;
 }
-var difference = subtract(a, b)
-console.log(difference)
+subtract(a, b);
+var difference = subtract(a, b);
+console.log(difference);
 
 /**
  *  #4
@@ -51,11 +53,12 @@ console.log(difference)
  *  Store this value in a variable named `product`
  */
 
-function multiply(a, b){
-return a * b;
+function multiply(n1, n2){
+	return n1 * n2;
 }
-var product = multiply(a, b)
-console.log(product)
+multiply(a, b);
+var product = multiply(a, b);
+console.log(product);
 
 
 /**
@@ -68,10 +71,11 @@ console.log(product)
  *  value stored in `difference`.
  */
 
-function checkDifference(difference){
-return "My football team lost " + difference + " times this week";
+function checkDifference(X){
+	return "My football team lost " + X + " times this week";
 }
-console.log(checkDifference(difference))
+checkDifference(difference);
+console.log(checkDifference(difference));
 
 /**
  *  #6
@@ -83,10 +87,11 @@ console.log(checkDifference(difference))
  *  stored in the variable `sum`.
  */
 
-function checkSum(sum){
-	return "I CAN ADDZ " + sum + " NUMBERS"
+function checkSum(X){
+	return "I CAN ADDZ " + X + " NUMBERS";
 }
-console.log(checkSum(sum))
+checkSum(sum);
+console.log(checkSum(sum));
 
 /**
  *  #7
@@ -97,10 +102,11 @@ console.log(checkSum(sum))
  *  then prints the result to the console.
  */
 
-function checkProduct(product){
-	return product * difference
+function checkProduct(n1, n2){
+	return n1 * n2;
 }
-console.log(checkProduct(product))
+checkProduct(product, difference);
+console.log(checkProduct(product, difference));
 
 /**
  *  #8
@@ -116,10 +122,19 @@ console.log(checkProduct(product))
  *      addThenSubtract(4, 5, 7); //-> returns 2 because 4 + 5 - 7 = 2
  */
 
-function addThenSubtract(num1, num2, num3){
-	return num1 + num2 - num3;
+function addThenSubtract(n1, n2, n3){
+	return n1 + n2 - n3;
 }
-console.log(addThenSubtract(20, 10, 5))
+addThenSubtract(sum, difference, product);;
+console.log(addThenSubtract(sum, difference, product));
+
+function addThenSubtract2(n1, n2, n3){
+	var addFirstTwo = add(n1, n2);
+	var minusLastOne = subtract(addFirstTwo, n3);
+	return minusLastOne;
+}
+
+console.log(addThenSubtract2(10, 2, 6));
 
 /**
  *  #9
@@ -133,11 +148,12 @@ console.log(addThenSubtract(20, 10, 5))
  *  Store the return of this function to a variable named `howMany`
  */
 
-function addThenMultiply(num1, num2, num3){
-	return num1 + num2 * num3;
+function addThenMultiply(n1, n2, n3){
+	return n1 + n2 * n3;
 }
+addThenMultiply(200, 100, 50);
 var howMany = addThenMultiply(200, 100, 50);
-console.log(howMany)
+console.log(howMany);
 
 /**
  *  #10
@@ -157,6 +173,7 @@ console.log(howMany)
 function createFullName(firstName, lastName){
 	return firstName + " " + lastName;
 }
+createFullName("Jasmine", "Soong");
 var myFullName = createFullName("Jasmine", "Soong");
 console.log(myFullName);
 
@@ -179,8 +196,9 @@ console.log(myFullName);
 function verifyDrinkingAge(age){
 	return age >= 21;
 }
+verifyDrinkingAge(22);
 var canDrinkBeer = verifyDrinkingAge(22);
-console.log(canDrinkBeer)
+console.log(canDrinkBeer);
 
 /**
  *  #12
@@ -192,7 +210,16 @@ console.log(canDrinkBeer)
  *  should be "This Party will have an open bar".
  */
 
-
+function throwParty(age){
+	if (age){
+		return "This Party will have an open bar";
+	}
+	else {
+		return "The Party will have tons of Cake!";
+	}
+}
+throwParty(canDrinkBeer);
+console.log(throwParty(canDrinkBeer));
 
 /**
  *  #13
@@ -214,10 +241,11 @@ console.log(canDrinkBeer)
  *      "Peter Bojanglesloves loves to eat California Burritos"
  */
 
-function eatFood(firstName, lastName, food){
-	return firstName + " " + lastName + " loves to eat " + food;
+function eatFood(createFullName, food){
+	return createFullName + " loves to eat " + food;
 }
-console.log(eatFood("Ben", "Hur", "little fishies"))
+eatFood(createFullName("Ben", "Hur"), "little fishies");
+console.log(eatFood(createFullName("Ben", "Hur"), "little fishies"));
 
 /**
  *  #14
@@ -230,5 +258,4 @@ console.log(eatFood("Ben", "Hur", "little fishies"))
  *  the message will be `"Bacon Pancakes, makin' Bacon Pancakes..."`
  *  othewise the message will be `"Let it go.... LET IT GOOOOOOoOoOoOo..."`
  */
-
 
