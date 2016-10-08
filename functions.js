@@ -54,7 +54,8 @@ console.log(difference)
 function multiply(a, b){
 return a * b;
 }
-console.log(multiply(2, 8))
+var product = multiply(a, b)
+console.log(product)
 
 
 /**
@@ -67,6 +68,10 @@ console.log(multiply(2, 8))
  *  value stored in `difference`.
  */
 
+function checkDifference(difference){
+return "My football team lost " + difference + " times this week";
+}
+console.log(checkDifference(difference))
 
 /**
  *  #6
@@ -78,6 +83,10 @@ console.log(multiply(2, 8))
  *  stored in the variable `sum`.
  */
 
+function checkSum(sum){
+	return "I CAN ADDZ " + sum + " NUMBERS"
+}
+console.log(checkSum(sum))
 
 /**
  *  #7
@@ -88,6 +97,10 @@ console.log(multiply(2, 8))
  *  then prints the result to the console.
  */
 
+function checkProduct(product){
+	return product * difference
+}
+console.log(checkProduct(product))
 
 /**
  *  #8
@@ -103,6 +116,10 @@ console.log(multiply(2, 8))
  *      addThenSubtract(4, 5, 7); //-> returns 2 because 4 + 5 - 7 = 2
  */
 
+function addThenSubtract(num1, num2, num3){
+	return num1 + num2 - num3;
+}
+console.log(addThenSubtract(20, 10, 5))
 
 /**
  *  #9
@@ -116,6 +133,11 @@ console.log(multiply(2, 8))
  *  Store the return of this function to a variable named `howMany`
  */
 
+function addThenMultiply(num1, num2, num3){
+	return num1 + num2 * num3;
+}
+var howMany = addThenMultiply(200, 100, 50);
+console.log(howMany)
 
 /**
  *  #10
@@ -131,6 +153,12 @@ console.log(multiply(2, 8))
  * Call this function and pass your first and last name into it.
  * Store the return value to a variable named `myFullName`
  */
+
+function createFullName(firstName, lastName){
+	return firstName + " " + lastName;
+}
+var myFullName = createFullName("Jasmine", "Soong");
+console.log(myFullName);
 
 
 /**
@@ -148,6 +176,11 @@ console.log(multiply(2, 8))
  *  Store the return value to a variable named** `canDrinkBeer`
  */
 
+function verifyDrinkingAge(age){
+	return age >= 21;
+}
+var canDrinkBeer = verifyDrinkingAge(22);
+console.log(canDrinkBeer)
 
 /**
  *  #12
@@ -158,6 +191,7 @@ console.log(multiply(2, 8))
  *  "The Party will have tons of Cake!" otherwise this message
  *  should be "This Party will have an open bar".
  */
+
 
 
 /**
@@ -180,6 +214,10 @@ console.log(multiply(2, 8))
  *      "Peter Bojanglesloves loves to eat California Burritos"
  */
 
+function eatFood(firstName, lastName, food){
+	return firstName + " " + lastName + " loves to eat " + food;
+}
+console.log(eatFood("Ben", "Hur", "little fishies"))
 
 /**
  *  #14
@@ -192,4 +230,5 @@ console.log(multiply(2, 8))
  *  the message will be `"Bacon Pancakes, makin' Bacon Pancakes..."`
  *  othewise the message will be `"Let it go.... LET IT GOOOOOOoOoOoOo..."`
  */
+
 
