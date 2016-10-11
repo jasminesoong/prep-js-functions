@@ -149,10 +149,10 @@ console.log(addThenSubtract2(10, 2, 6));
  */
 
 function addThenMultiply(n1, n2, n3){
-	return n1 + n2 * n3;
+	return (n1 + n2) * n3;
 }
-addThenMultiply(200, 100, 50);
-var howMany = addThenMultiply(200, 100, 50);
+addThenMultiply(3, 4, 2);
+var howMany = addThenMultiply(3, 4, 2);
 console.log(howMany);
 
 /**
@@ -194,7 +194,12 @@ console.log(myFullName);
  */
 
 function verifyDrinkingAge(age){
-	return age >= 21;
+	if (age >= 21){
+		return true;
+
+	} else {
+		return false;
+	}
 }
 verifyDrinkingAge(22);
 var canDrinkBeer = verifyDrinkingAge(22);
@@ -259,3 +264,16 @@ console.log(eatFood(createFullName("Ben", "Hur"), "little fishies"));
  *  othewise the message will be `"Let it go.... LET IT GOOOOOOoOoOoOo..."`
  */
 
+
+function repeater(X){
+	for(var i = 0; i <= canDrinkBeer; i++){
+		if (X === true){
+			console.log( "Bacon Pancakes, makin' Bacon Pancakes...");
+		}
+		else {
+			console.log( "Let it go... LET IT GOOOOOOoOoOoOo...");
+		}
+	}
+}
+repeater(howMany);
+console.log(repeater(howMany));
