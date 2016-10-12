@@ -14,6 +14,7 @@
 
 var a = 1;
 var b = 10;
+console.log(a, b)
 
 /**
  *  #2
@@ -28,7 +29,7 @@ function add(n1, n2){
 }
 add(a, b);
 var sum = add(a, b);
-console.log(sum);
+console.log('sum: ', sum);
 
 /**
  *  #3
@@ -43,7 +44,7 @@ function subtract(n1, n2){
 }
 subtract(a, b);
 var difference = subtract(a, b);
-console.log(difference);
+console.log('difference: ', difference);
 
 /**
  *  #4
@@ -58,7 +59,7 @@ function multiply(n1, n2){
 }
 multiply(a, b);
 var product = multiply(a, b);
-console.log(product);
+console.log('product: ', product);
 
 
 /**
@@ -75,7 +76,7 @@ function checkDifference(X){
 	return "My football team lost " + X + " times this week";
 }
 checkDifference(difference);
-console.log(checkDifference(difference));
+console.log('checkDifference: ', checkDifference(difference));
 
 /**
  *  #6
@@ -91,7 +92,7 @@ function checkSum(X){
 	return "I CAN ADDZ " + X + " NUMBERS";
 }
 checkSum(sum);
-console.log(checkSum(sum));
+console.log('checkSum: ',checkSum(sum));
 
 /**
  *  #7
@@ -106,7 +107,7 @@ function checkProduct(n1, n2){
 	return n1 * n2;
 }
 checkProduct(product, difference);
-console.log(checkProduct(product, difference));
+console.log('checkProduct: ', checkProduct(product, difference));
 
 /**
  *  #8
@@ -122,11 +123,6 @@ console.log(checkProduct(product, difference));
  *      addThenSubtract(4, 5, 7); //-> returns 2 because 4 + 5 - 7 = 2
  */
 
-function addThenSubtract(n1, n2, n3){
-	return n1 + n2 - n3;
-}
-addThenSubtract(sum, difference, product);;
-console.log(addThenSubtract(sum, difference, product));
 
 function addThenSubtract2(n1, n2, n3){
 	var addFirstTwo = add(n1, n2);
@@ -134,7 +130,8 @@ function addThenSubtract2(n1, n2, n3){
 	return minusLastOne;
 }
 
-console.log(addThenSubtract2(10, 2, 6));
+console.log('addThenSubtract: ', addThenSubtract2(10, 2, 6));
+
 
 /**
  *  #9
@@ -149,11 +146,11 @@ console.log(addThenSubtract2(10, 2, 6));
  */
 
 function addThenMultiply(n1, n2, n3){
-	return (n1 + n2) * n3;
+	return multiply(add(n1, n2), n3);
 }
 addThenMultiply(3, 4, 2);
 var howMany = addThenMultiply(3, 4, 2);
-console.log(howMany);
+console.log('howMany: ', howMany);
 
 /**
  *  #10
@@ -175,7 +172,7 @@ function createFullName(firstName, lastName){
 }
 createFullName("Jasmine", "Soong");
 var myFullName = createFullName("Jasmine", "Soong");
-console.log(myFullName);
+console.log('myFullName: ', myFullName);
 
 
 /**
@@ -203,7 +200,7 @@ function verifyDrinkingAge(age){
 }
 verifyDrinkingAge(22);
 var canDrinkBeer = verifyDrinkingAge(22);
-console.log(canDrinkBeer);
+console.log('canDrinkBeer: ', canDrinkBeer);
 
 /**
  *  #12
@@ -224,7 +221,7 @@ function throwParty(age){
 	}
 }
 throwParty(canDrinkBeer);
-console.log(throwParty(canDrinkBeer));
+console.log('throwParty: ', throwParty(canDrinkBeer));
 
 /**
  *  #13
@@ -250,7 +247,7 @@ function eatFood(createFullName, food){
 	return createFullName + " loves to eat " + food;
 }
 eatFood(createFullName("Ben", "Hur"), "little fishies");
-console.log(eatFood(createFullName("Ben", "Hur"), "little fishies"));
+console.log('eatFood: ', eatFood(createFullName("Ben", "Hur"), "little fishies"));
 
 /**
  *  #14
@@ -276,3 +273,20 @@ function repeater(X){
 	}
 }
 repeater(howMany);
+
+function repeater2(){
+	var msg;
+	if(canDrinkBeer === true){
+		msg = "bacon bacon";
+	}
+	else {
+		msg = "just go already";
+	}
+	for(var i = howMany; i>0; i--){
+		console.log(msg)
+	}
+	/*return msg;*/
+}
+repeater2(howMany)
+
+/* repeater2 - doesn't need parameters within () because it has actual data "canDrinkBeer" in the function.*/
