@@ -276,4 +276,3 @@ function repeater(X){
 	}
 }
 repeater(howMany);
-console.log(repeater(howMany));
