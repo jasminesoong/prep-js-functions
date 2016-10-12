@@ -266,8 +266,8 @@ console.log(eatFood(createFullName("Ben", "Hur"), "little fishies"));
 
 
 function repeater(X){
-	for(var i = 0; i <= canDrinkBeer; i++){
-		if (X === true){
+	for(var i = 0; i<X; i++){
+		if (canDrinkBeer === true){
 			console.log( "Bacon Pancakes, makin' Bacon Pancakes...");
 		}
 		else {
